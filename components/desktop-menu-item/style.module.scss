@@ -1,0 +1,22 @@
+.box {
+  padding: 10px;
+  margin: 0 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+  padding: 10px;
+  border-radius: 5px;
+  // display: none;
+  top: 35px;
+  left: -20px;
+  background-color: rgb(31, 31, 31);
+  // min-width: min-content;
+}
+
+.subMenu {
+  padding: 10px 20px;
+  white-space: nowrap;
+}
