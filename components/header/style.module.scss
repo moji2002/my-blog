@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  border-bottom: 1px solid rgb(148, 148, 148);
+  padding: 20px 0;
+}
+
+.logo {
+  font-family: serif;
+  font-size: 50px;
+  font-weight: bolder;
+  color: #fff;
+}
+
+.icon {
+  width: 30px;
+  padding: 4px;
+}
