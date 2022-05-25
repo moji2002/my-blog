@@ -18,7 +18,10 @@ const DesktopMenuItem: FC<NavItem> = ({ label, children, href }) => {
           <a>{label}</a>
         </Link>
       ) : (
-        <span>{label}</span>
+        <div className={s.label}>
+          <span>{label}</span>
+          <i className={s.arrow}></i>
+        </div>
       )}
 
       {children && (
