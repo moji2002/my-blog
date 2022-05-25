@@ -14,6 +14,23 @@
   left: -20px;
   background-color: rgb(31, 31, 31);
   // min-width: min-content;
+
+  // transiton: opacity 1s ease;
+}
+.menuEnter {
+  opacity: 0;
+}
+
+.menuEnterActive {
+  opacity: 1;
+  transition: opacity 200ms ease;
+}
+
+.menuExit {
+  opacity: 1;
+  opacity: 0;
+
+  transition: opacity 200ms ease;
 }
 
 .subMenu {
