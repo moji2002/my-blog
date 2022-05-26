@@ -1,8 +1,10 @@
 import { FC, useState } from "react";
 import Link from "next/link";
-import { NavItem } from "../../types/navItem";
+import { NavItem } from "../../constants/navItems";
 import s from "./style.module.scss";
 import { CSSTransition } from "react-transition-group";
+import Arrow from "../arrow";
+import { Sides } from "../../constants/sides";
 
 const DesktopMenuItem: FC<NavItem> = ({ label, children, href }) => {
   const [active, setActive] = useState(false);
@@ -15,12 +17,12 @@ const DesktopMenuItem: FC<NavItem> = ({ label, children, href }) => {
     >
       {href ? (
         <Link href={href}>
-          <a>{label}</a>
+          <a className={s.link}>{label}</a>
         </Link>
       ) : (
         <div className={s.label}>
-          <span>{label}</span>
-          <i className={s.arrow}></i>
+          <span className={s.link}>{label}</span>
+          <Arrow side={active ? Sides.up : Sides.down} />
         </div>
       )}
 
@@ -38,7 +40,7 @@ const DesktopMenuItem: FC<NavItem> = ({ label, children, href }) => {
         >
           <div className={s.menu}>
             {children.map(({ label, href = "" }) => (
-              <div key={label} className={s.subMenu}>
+              <div key={label} className={s.link}>
                 <Link href={href}>
                   <a>{label}</a>
                 </Link>
