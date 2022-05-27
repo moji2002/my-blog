@@ -1,0 +1,45 @@
+.menu {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+.menu_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.link {
+  user-select: none;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 200ms ease;
+
+  &:hover {
+    color: rgb(255, 255, 255);
+  }
+}
+
+.item {
+  height: 0;
+  overflow: hidden;
+  transition: height 200ms ease;
+
+  &_active {
+    height: max-content;
+    overflow: visible;
+  }
+}
+
+.subMenu {
+  margin-left: 10px;
+  font-size: 18px;
+  padding: 10px 0;
+
+  &:first-child {
+    margin-top: 10px;
+  }
+}
