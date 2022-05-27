@@ -5,6 +5,7 @@ import s from "./style.module.scss";
 
 import { RootState } from "../../store";
 import { closeSearch } from "../../store/userInterfaceSlice";
+import useDebounceState from "../../hooks/useDebounceState";
 
 type Props = {
   // children: ReactNode;
@@ -18,18 +19,11 @@ const Search: FC<Props> = () => {
 
   const handleClose = () => dispatch(closeSearch());
 
-  const [searchText, setSearchText] = useState("");
+  const [searchText, setSearchText] = useDebounceState("");
 
   useEffect(() => {
     console.log(searchText);
   }, [searchText]);
-
-  const debounceTimeoutId = useRef<ReturnType<typeof setTimeout>>();
-
-  const debounce = (text: string) => {
-    clearTimeout(debounceTimeoutId.current);
-    debounceTimeoutId.current = setTimeout(() => setSearchText(text), 300);
-  };
 
   return (
     <FullscreenModal visible={searchVisible} handleClose={handleClose}>
@@ -40,7 +34,7 @@ const Search: FC<Props> = () => {
               <span>Search For:</span>
             </label>
             <input
-              onChange={(e) => debounce(e.target.value)}
+              onChange={(e) => setSearchText(e.target.value)}
               className={s.input}
               type="search"
               name="search"
