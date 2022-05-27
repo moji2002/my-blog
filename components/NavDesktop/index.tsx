@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { NAV_ITEMS } from "../../constants/navItems";
-import DesktopMenuItem from "../desktop-menu-item";
+import DesktopMenuItem from "../DesktopMenuItem";
 import s from "./style.module.scss";
 
 const NavDesktop: FC = () => {

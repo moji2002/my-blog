@@ -1,10 +1,10 @@
 import { FC, useState } from "react";
 import Link from "next/link";
-import { NavItem } from "../../constants/navItems";
-import s from "./style.module.scss";
 import { CSSTransition } from "react-transition-group";
-import Arrow from "../arrow";
 import { Sides } from "../../constants/sides";
+import { NavItem } from "../../constants/navItems";
+import Arrow from "../Arrow";
+import s from "./style.module.scss";
 
 const DesktopMenuItem: FC<NavItem> = ({ label, children, href }) => {
   const [active, setActive] = useState(false);

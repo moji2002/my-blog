@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.inputSection {
+  width: 100%;
+}
+.form {
+  text-align: center;
+}
+
+.searchLabel {
+  display: block;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.input {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  background-color: rgb(35, 35, 35);
+  height: 60px;
+  font-size: 40px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+
+// .resultSection{
+
+// }

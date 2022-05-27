@@ -1,9 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Header from "../components/header";
-import NavDesktop from "../components/nav-desktop";
-import NavMobile from "../components/nav-mobile";
-import PageHeader from "../components/page-header";
+import Header from "../components/Header";
+import NavDesktop from "../components/NavDesktop";
+import NavMobile from "../components/NavMobile";
+import PageHeader from "../components/PageHeader";
+import Search from "../components/Search";
 
 const Home: NextPage = () => {
   return (
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
         <Header />
         <NavDesktop />
         <NavMobile />
+        <Search />
         <div style={{ height: 500 }}></div>
       </PageHeader>
     </>

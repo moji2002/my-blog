@@ -1,11 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export interface UserInterface {
-  isMenuOpen: boolean;
+  navMenuVisible: boolean;
+  searchVisible: boolean;
 }
 
 const initialState: UserInterface = {
-  isMenuOpen: false,
+  navMenuVisible: false,
+  searchVisible: false,
 };
 
 export const userInterfaceSlice = createSlice({
@@ -13,14 +15,21 @@ export const userInterfaceSlice = createSlice({
   initialState,
   reducers: {
     openMenu: (state) => {
-      state.isMenuOpen = true;
+      state.navMenuVisible = true;
     },
     closeMenu: (state) => {
-      state.isMenuOpen = false;
+      state.navMenuVisible = false;
+    },
+    openSearch: (state) => {
+      state.searchVisible = true;
+    },
+    closeSearch: (state) => {
+      state.searchVisible = false;
     },
   },
 });
 
-export const { openMenu, closeMenu } = userInterfaceSlice.actions;
+export const { openMenu, closeMenu, openSearch, closeSearch } =
+  userInterfaceSlice.actions;
 
 export default userInterfaceSlice.reducer;
