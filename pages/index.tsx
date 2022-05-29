@@ -6,8 +6,16 @@ import NavDesktop from "../components/NavDesktop";
 import NavMobile from "../components/NavMobile";
 import PageHeader from "../components/PageHeader";
 import Search from "../components/Search";
+import { useEffect } from "react";
 
 const Home: NextPage = () => {
+  useEffect(() => {
+    console.log("use effect");
+
+    window.addEventListener("load", function () {
+      console.log("loaded");
+    });
+  }, []);
   return (
     <>
       <Head>
