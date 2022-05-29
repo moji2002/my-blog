@@ -20,6 +20,10 @@ const Spinner: FC<Props> = () => {
     });
   }, []);
 
+  // useEffect(()=>{
+  //     setTimeout(()=>dispatch(pageLoaded()),2000)
+  // },[])
+
   return (
     <FullscreenModal visible={!loaded}>
       <div className={s.container}>

@@ -1,14 +1,19 @@
 import React, { FC } from "react";
 import HeroCard from "../HeroCard";
 import s from "./style.module.scss";
+import { RootState } from "../../store";
+import { useSelector } from "react-redux";
+import classNames from "classnames";
 
 type Props = {
   // children: ReactNode;
 };
 
 const Hero: FC<Props> = () => {
+  const loaded = useSelector((state: RootState) => state.ui.loaded);
+
   return (
-    <div className={s.container}>
+    <div className={classNames([s.container], { [s.containerLoaded]: loaded })}>
       <div className={s.line}>
         <div className={s.lineInner}></div>
       </div>
