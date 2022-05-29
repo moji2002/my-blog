@@ -1,11 +1,11 @@
-import React, { FC, useEffect, useRef, useState } from "react";
+import React, { FC, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import FullscreenModal from "../FullscreenModal";
-import s from "./style.module.scss";
 
 import { RootState } from "../../store";
 import { closeSearch } from "../../store/userInterfaceSlice";
 import useDebounceState from "../../hooks/useDebounceState";
+import s from "./style.module.scss";
 
 type Props = {
   // children: ReactNode;

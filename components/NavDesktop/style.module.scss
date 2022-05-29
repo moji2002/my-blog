@@ -1,14 +1,16 @@
-@import "../../styles//variables";
+@import "../../styles/variables";
 
 .container {
   display: none;
+  z-index: 9;
 
   @media screen and (min-width: $desktop-breakpoint) {
     display: flex;
     justify-content: center;
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
     align-items: center;
     position: relative;
     color: #fff;

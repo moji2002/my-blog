@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Header from "../components/Header";
+import Hero from "../components/Hero";
 import NavDesktop from "../components/NavDesktop";
 import NavMobile from "../components/NavMobile";
 import PageHeader from "../components/PageHeader";
@@ -19,7 +20,7 @@ const Home: NextPage = () => {
         <NavDesktop />
         <NavMobile />
         <Search />
-        <div style={{ height: 500 }}></div>
+        <Hero />
       </PageHeader>
     </>
   );
