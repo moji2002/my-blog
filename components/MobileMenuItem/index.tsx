@@ -35,7 +35,7 @@ const MobileMenuItem: FC<NavItem> = ({ label, children, href }) => {
           style={{ height: active ? listRef.current?.scrollHeight : 0 }}
         >
           {children.map(({ label, href }) => (
-            <li className={classNames(s.link, s.subMenu)}>
+            <li key={label} className={classNames(s.link, s.subMenu)}>
               <a href={href}>{label}</a>
             </li>
           ))}
