@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Header from "../components/Header";
+import Header from "../components/MainHeader";
 import Hero from "../components/Hero";
 import NavDesktop from "../components/NavDesktop";
 import NavMobile from "../components/NavMobile";

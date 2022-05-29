@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CSSTransition } from "react-transition-group";
 import { Sides } from "../../constants/sides";
 import { NavItem } from "../../constants/navItems";
-import Arrow from "../Arrow";
+import Arrow from "../SmallArrow";
 import s from "./style.module.scss";
 
 const DesktopMenuItem: FC<NavItem> = ({ label, children, href }) => {
