@@ -10,10 +10,12 @@
   position: relative;
   top: 200px;
 
-  transition: top 2s ease-in-out;
+  transition: all 1s ease-in-out 200ms;
+  opacity: 0;
 
   &Loaded {
     top: 0;
+    opacity: 1;
   }
 
   height: 900px;
