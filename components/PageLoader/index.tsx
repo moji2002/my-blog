@@ -18,11 +18,8 @@ const Spinner: FC<Props> = () => {
     window.addEventListener("load", function () {
       dispatch(pageLoaded());
     });
+    setTimeout(() => dispatch(pageLoaded()), 5000);
   }, []);
-
-  // useEffect(()=>{
-  //     setTimeout(()=>dispatch(pageLoaded()),2000)
-  // },[])
 
   return (
     <FullscreenModal visible={!loaded}>
