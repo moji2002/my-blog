@@ -1,9 +1,9 @@
 import React, { FC, useRef, useState } from "react";
 import classNames from "classnames";
-import s from "./style.module.scss";
 import { NavItem } from "../../constants/navItems";
-import Arrow from "../arrow";
+import Arrow from "../SmallArrow";
 import { Sides } from "../../constants/sides";
+import s from "./style.module.scss";
 
 const MobileMenuItem: FC<NavItem> = ({ label, children, href }) => {
   const [active, setActive] = useState(false);
@@ -17,13 +17,13 @@ const MobileMenuItem: FC<NavItem> = ({ label, children, href }) => {
   const listRef = useRef<HTMLOListElement>(null);
 
   return (
-    <li onClick={toggle} className={s.menu}>
+    <li className={s.menu}>
       {href ? (
         <a href={href} className={s.link}>
           {label}
         </a>
       ) : (
-        <div className={s.menu_inner}>
+        <div onClick={toggle} className={s.menu_inner}>
           <span className={s.link}> {label}</span>
           <Arrow side={active ? Sides.up : Sides.down} />
         </div>

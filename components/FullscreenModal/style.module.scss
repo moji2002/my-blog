@@ -9,29 +9,7 @@
   height: 100%;
   background-color: rgb(10, 10, 10);
   padding: 5% 15%;
-}
-
-.heading {
-  margin: 10px 0;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-}
-
-.close {
-  text-align: center;
-  &::after {
-    display: inline-block;
-    content: "\00d7"; /* This will render the 'X' */
-    color: #fff;
-    font-size: 40px;
-    padding: 5px;
-    cursor: pointer;
-  }
-}
-
-.list {
-  width: 100%;
+  z-index: 9;
 }
 
 .menuEnter {

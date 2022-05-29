@@ -1,13 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { FC } from "react";
 import { useDispatch } from "react-redux";
-import { openMenu } from "../../store/userInterfaceSlice";
+import { openMenu, openSearch } from "../../store/userInterfaceSlice";
 import s from "./style.module.scss";
 
 const Header: FC = () => {
   const dispatch = useDispatch();
 
   const handleOpenMenu = () => dispatch(openMenu());
+  const handleOpenSearch = () => dispatch(openSearch());
 
   return (
     <div className={s.container}>
@@ -22,9 +23,12 @@ const Header: FC = () => {
       </div>
       <div className={s.logo}>Philosophy.</div>
       <div className={s.rightHandSide}>
-        <a href="http://" target="_blank" rel="noopener noreferrer">
-          <img className={s.icon} src="/assets/icons/search.svg" alt="" />
-        </a>
+        <img
+          onClick={handleOpenSearch}
+          className={s.icon}
+          src="/assets/icons/search.svg"
+          alt=""
+        />
       </div>
     </div>
   );
