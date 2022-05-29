@@ -1,7 +1,7 @@
 import React, { FC } from "react";
-import s from "./style.module.scss";
 import classNames from "classnames";
 import { Sides } from "../../constants/sides";
+import s from "./style.module.scss";
 
 type Props = {
   side?: Sides;

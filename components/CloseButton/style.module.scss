@@ -1,0 +1,11 @@
+.close {
+  text-align: center;
+  &::after {
+    display: inline-block;
+    content: "\00d7"; /* This will render the 'X' */
+    color: #fff;
+    font-size: 40px;
+    padding: 5px;
+    cursor: pointer;
+  }
+}
