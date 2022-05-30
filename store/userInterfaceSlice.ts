@@ -3,11 +3,13 @@ import { createSlice } from "@reduxjs/toolkit";
 export interface UserInterface {
   navMenuVisible: boolean;
   searchVisible: boolean;
+  loaded: boolean;
 }
 
 const initialState: UserInterface = {
   navMenuVisible: false,
   searchVisible: false,
+  loaded: false,
 };
 
 export const userInterfaceSlice = createSlice({
@@ -26,10 +28,13 @@ export const userInterfaceSlice = createSlice({
     closeSearch: (state) => {
       state.searchVisible = false;
     },
+    pageLoaded: (state) => {
+      state.loaded = true;
+    },
   },
 });
 
-export const { openMenu, closeMenu, openSearch, closeSearch } =
+export const { openMenu, closeMenu, openSearch, closeSearch, pageLoaded } =
   userInterfaceSlice.actions;
 
 export default userInterfaceSlice.reducer;
