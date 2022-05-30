@@ -7,6 +7,17 @@
   margin: 0 auto;
   padding: 50px 5% 0;
 
+  position: relative;
+  top: 200px;
+
+  transition: all 1s ease-in-out 200ms;
+  opacity: 0;
+
+  &Loaded {
+    top: 0;
+    opacity: 1;
+  }
+
   height: 900px;
   @media screen and (min-width: $desktop-breakpoint) {
     height: 600px;

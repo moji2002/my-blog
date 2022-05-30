@@ -6,7 +6,7 @@ import CloseButton from "../CloseButton";
 type Props = {
   visible: boolean;
   children: React.ReactNode;
-  handleClose: () => {};
+  handleClose?: () => {};
 };
 
 const FullscreenModal: FC<Props> = ({ visible, children, handleClose }) => {
@@ -23,7 +23,7 @@ const FullscreenModal: FC<Props> = ({ visible, children, handleClose }) => {
       }}
     >
       <div className={s.box}>
-        <CloseButton onClick={handleClose} />
+        {handleClose && <CloseButton onClick={handleClose} />}
         {children}
       </div>
     </CSSTransition>
