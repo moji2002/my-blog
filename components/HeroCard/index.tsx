@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React, { FC } from "react";
+import Tag from "../Tag";
 import s from "./style.module.scss";
 
 type Props = {
@@ -17,6 +18,7 @@ const HeroCard: FC<Props> = ({ imageSrc }) => {
         objectFit="cover"
         objectPosition="center"
       />
+      <Tag label="music" href="/music" accent="blue" />
     </div>
   );
 };
