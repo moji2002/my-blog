@@ -15,10 +15,14 @@ const Spinner: FC<Props> = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    window.addEventListener("load", function () {
-      dispatch(pageLoaded());
+    document.addEventListener("readystatechange", () => {
+      console.log("state: ", document.readyState);
+
+      if (document.readyState !== "loading") {
+        dispatch(pageLoaded());
+      }
     });
-    setTimeout(() => dispatch(pageLoaded()), 5000);
+    // setTimeout(() => dispatch(pageLoaded()), 5000);
   }, []);
 
   return (
