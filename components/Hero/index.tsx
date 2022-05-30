@@ -5,11 +5,7 @@ import { RootState } from "../../store";
 import { useSelector } from "react-redux";
 import classNames from "classnames";
 
-type Props = {
-  // children: ReactNode;
-};
-
-const Hero: FC<Props> = () => {
+const Hero: FC = () => {
   const loaded = useSelector((state: RootState) => state.ui.loaded);
 
   return (

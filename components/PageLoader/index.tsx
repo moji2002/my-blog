@@ -6,23 +6,15 @@ import { RootState } from "../../store";
 import { useDispatch } from "react-redux";
 import { pageLoaded } from "../../store/userInterfaceSlice";
 
-type Props = {
-  // children: ReactNode;
-};
-
-const Spinner: FC<Props> = () => {
+const Spinner: FC = () => {
   const loaded = useSelector((state: RootState) => state.ui.loaded);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    document.addEventListener("readystatechange", () => {
-      console.log("state: ", document.readyState);
-
-      if (document.readyState !== "loading") {
-        dispatch(pageLoaded());
-      }
+    window.addEventListener("load", function () {
+      dispatch(pageLoaded());
     });
-    // setTimeout(() => dispatch(pageLoaded()), 5000);
+    setTimeout(() => dispatch(pageLoaded()), 5000);
   }, []);
 
   return (

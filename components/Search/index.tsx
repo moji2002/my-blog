@@ -7,11 +7,7 @@ import { closeSearch } from "../../store/userInterfaceSlice";
 import useDebounceState from "../../hooks/useDebounceState";
 import s from "./style.module.scss";
 
-type Props = {
-  // children: ReactNode;
-};
-
-const Search: FC<Props> = () => {
+const Search: FC = () => {
   const searchVisible = useSelector(
     (state: RootState) => state.ui.searchVisible
   );
@@ -22,7 +18,7 @@ const Search: FC<Props> = () => {
   const [searchText, setSearchText] = useDebounceState("");
 
   useEffect(() => {
-    console.log(searchText);
+    // console.log(searchText);
   }, [searchText]);
 
   return (
