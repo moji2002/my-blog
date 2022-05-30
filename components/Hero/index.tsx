@@ -19,12 +19,25 @@ const Hero: FC<Props> = () => {
       </div>
       <div className={s.inner}>
         <div className={s.leftColumn}>
-          <HeroCard imageSrc="/assets/images/xfeatured-guitarman.webp" />
+          <HeroCard
+            title="What Your Music Preference Says About You and Your Personality."
+            imageSrc="/assets/images/xfeatured-guitarman.webp"
+            href=""
+            primary
+          />
         </div>
 
         <div className={s.rightColumn}>
-          <HeroCard imageSrc="/assets/images/xfeatured-watch.webp" />
-          <HeroCard imageSrc="/assets/images/xfeatured-beetle.webp" />
+          <HeroCard
+            title="The Pomodoro Technique Really Works."
+            imageSrc="/assets/images/xfeatured-watch.webp"
+            href=""
+          />
+          <HeroCard
+            title="Throwback To The Good Old Days."
+            imageSrc="/assets/images/xfeatured-beetle.webp"
+            href=""
+          />
         </div>
       </div>
       <div className={s.line}>
