@@ -8,7 +8,7 @@ export type NavItem = {
 export const NAV_ITEMS: Array<NavItem> = [
   {
     label: "Home",
-    href: "link5",
+    href: "/link5",
   },
   {
     label: "Categories",
@@ -16,32 +16,32 @@ export const NAV_ITEMS: Array<NavItem> = [
       {
         label: "Lifestyle",
         subLabel: "",
-        href: "link3",
+        href: "/link3",
       },
       {
         label: "Health",
         subLabel: "",
-        href: "link4",
+        href: "/link4",
       },
       {
         label: "Family",
         subLabel: "",
-        href: "link4",
+        href: "/link4",
       },
       {
         label: "Management",
         subLabel: "",
-        href: "link4",
+        href: "/link4",
       },
       {
         label: "Travel",
         subLabel: "",
-        href: "link4",
+        href: "/link4",
       },
       {
         label: "Work",
         subLabel: "",
-        href: "link4",
+        href: "/link4",
       },
     ],
   },
@@ -51,35 +51,35 @@ export const NAV_ITEMS: Array<NavItem> = [
       {
         label: "Video Post",
         subLabel: "",
-        href: "link3",
+        href: "/link3",
       },
       {
         label: "Audio Post",
         subLabel: "",
-        href: "link4",
+        href: "/link4",
       },
       {
         label: "Gallery Post",
         subLabel: "",
-        href: "link4",
+        href: "/link4",
       },
       {
         label: "Standard Post",
         subLabel: "",
-        href: "link4",
+        href: "/link4",
       },
     ],
   },
   {
     label: "Styles",
-    href: "link5",
+    href: "/link5",
   },
   {
     label: "About",
-    href: "link6",
+    href: "/link6",
   },
   {
     label: "Contact",
-    href: "link6",
+    href: "/link6",
   },
 ];
