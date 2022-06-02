@@ -1,0 +1,11 @@
+.masonry {
+  padding: 10px;
+  columns: 3;
+  column-gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media screen and (min-width: 1024px) {
+    columns: 4;
+  }
+}
