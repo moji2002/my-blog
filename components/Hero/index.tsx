@@ -4,8 +4,19 @@ import s from "./style.module.scss";
 import { RootState } from "../../store";
 import { useSelector } from "react-redux";
 import classNames from "classnames";
+import type { PostCardType } from "../../types/PostCardType";
 
-const Hero: FC = () => {
+type Tuple<
+  T,
+  N extends number,
+  R extends readonly T[] = []
+> = R["length"] extends N ? R : Tuple<T, N, readonly [T, ...R]>;
+
+type Props = {
+  featurePosts: Tuple<PostCardType, 3>;
+};
+
+const Hero: FC<Props> = () => {
   const loaded = useSelector((state: RootState) => state.ui.loaded);
 
   return (

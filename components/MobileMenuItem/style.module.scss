@@ -2,7 +2,6 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 20px;
   font-weight: bold;
-  padding: 20px 0;
   cursor: pointer;
 }
 
@@ -17,6 +16,8 @@
   user-select: none;
   color: rgba(255, 255, 255, 0.7);
   transition: color 200ms ease;
+  display: block;
+  padding: 20px 0;
 
   &:hover {
     color: rgb(255, 255, 255);

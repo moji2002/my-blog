@@ -9,7 +9,7 @@ type Props = {
   accent: "green" | "blue";
 };
 
-const Tag: FC<Props> = ({ label, href, accent }) => (
+const HeaderTag: FC<Props> = ({ label, href, accent }) => (
   <Link href={href}>
     <a
       className={classNames(s.tag, {
@@ -22,4 +22,4 @@ const Tag: FC<Props> = ({ label, href, accent }) => (
   </Link>
 );
 
-export default Tag;
+export default HeaderTag;
