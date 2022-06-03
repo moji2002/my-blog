@@ -6,7 +6,11 @@ type Props = {
 };
 
 const MasonryGrid: FC<Props> = ({ children }) => {
-  return <section className={s.masonry}>{children}</section>;
+  return (
+    <section className={s.masonryOuter}>
+      <div className={s.masonry}>{children}</div>
+    </section>
+  );
 };
 
 export default MasonryGrid;

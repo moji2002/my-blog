@@ -33,12 +33,12 @@ const Home: NextPage<Props> = ({ posts, featurePosts }) => {
         <Search />
         <Hero featurePosts={featurePosts} />
         <PageLoader />
-        <MasonryGrid>
-          {posts.map((props) => (
-            <MasonryBrick key={props.id} {...props} />
-          ))}
-        </MasonryGrid>
       </PageHeader>
+      <MasonryGrid>
+        {posts.map((props) => (
+          <MasonryBrick key={props.id} {...props} />
+        ))}
+      </MasonryGrid>
     </>
   );
 };
@@ -78,5 +78,6 @@ export async function getStaticProps() {
   });
   return {
     props: { posts, featurePosts },
+    revalidate: 10,
   };
 }

@@ -11,6 +11,7 @@ const PageHeader: FC<Props> = ({ children }) => {
     <section className={s.wrapper}>
       <div className={s.container}>{children}</div>
       <Image
+        className={s.img}
         src="/assets/images/hero-bg.jpg"
         alt=""
         layout="fill"

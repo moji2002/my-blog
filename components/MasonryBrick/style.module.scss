@@ -1,9 +1,12 @@
 .masonryBrick {
   width: 100%;
   background-color: #fff;
-  padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   break-inside: avoid;
+}
+
+.context {
+  padding: 30px 20px;
 }
 
 .masonryBrick img {
@@ -12,6 +15,11 @@
 }
 
 .masonryBrick h2 {
-  text-transform: uppercase;
+  font-family: serif;
   margin-bottom: 10px;
+  font-size: 30px;
+  letter-spacing: 0.5px;
+}
+.masonryBrick p {
+  line-height: 1.5;
 }
