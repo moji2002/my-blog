@@ -5,20 +5,27 @@ import React, { FC } from "react";
 import HeaderTag from "../HeaderTag";
 import s from "./style.module.scss";
 
-type Props = {
-  imageSrc: string;
-  title: string;
-  href: string;
-  primary?: boolean;
-};
+import { PostCardType } from "../../types/PostCardType";
 
-const HeroCard: FC<Props> = ({ imageSrc, title, href, primary = false }) => {
+interface Props extends PostCardType {
+  primary?: boolean;
+}
+
+const HeroCard: FC<Props> = ({
+  imgSrc,
+  thumbnailSrc,
+  title,
+  href,
+  primary = false,
+}) => {
   return (
     <div className={s.box}>
       <Image
         className={s.img}
-        src={imageSrc}
+        src={imgSrc}
+        placeholder="blur"
         layout="fill"
+        blurDataURL={thumbnailSrc}
         objectFit="cover"
         objectPosition="center"
       />

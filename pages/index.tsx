@@ -15,9 +15,10 @@ import type { PostCardType } from "../types/PostCardType";
 
 type Props = {
   posts: PostCardType[];
+  featurePosts: PostCardType[];
 };
 
-const Home: NextPage<Props> = ({ posts }) => {
+const Home: NextPage<Props> = ({ posts, featurePosts }) => {
   return (
     <>
       <Head>
@@ -26,25 +27,16 @@ const Home: NextPage<Props> = ({ posts }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageHeader>
+        <Header />
         <NavDesktop />
         <NavMobile />
         <Search />
-        {/* <Hero /> */}
+        <Hero featurePosts={featurePosts} />
         <PageLoader />
         <MasonryGrid>
-          {posts.map(({ imgSrc, excerpt, title, date, index }) => {
-            return (
-              <MasonryBrick
-                key={title}
-                title={title}
-                excerpt={excerpt}
-                date={date}
-                imgSrc={imgSrc}
-                metaLinks={[{ href: "", label: "" }]}
-                index={index}
-              />
-            );
-          })}
+          {posts.map((props) => (
+            <MasonryBrick key={props.id} {...props} />
+          ))}
         </MasonryGrid>
       </PageHeader>
     </>
@@ -54,20 +46,37 @@ const Home: NextPage<Props> = ({ posts }) => {
 export default Home;
 
 export async function getStaticProps() {
-  const posts = [...Array(20).keys()].map((index) => {
+  const posts: PostCardType[] = [...Array(20).keys()].map((index) => {
     const imgSeed = getRandomInt(1, 1000);
     const imgHeight = getRandomInt(200, 500);
     const title = lorem.generateSentences(1);
     const excerpt = lorem.generateParagraphs(1);
     return {
       imgSrc: `https://picsum.photos/seed/${imgSeed}/400/${imgHeight}`,
+      thumbnailSrc: `https://picsum.photos/seed/${imgSeed}/100/100`,
       excerpt,
       title,
-      date: Date.now(),
-      index,
+      timestamp: Date.now(),
+      id: String(index),
+      href: "",
+    };
+  });
+
+  const featurePosts: PostCardType[] = [...Array(3).keys()].map((index) => {
+    const imgSeed = getRandomInt(1, 1000);
+    const title = lorem.generateSentences(1);
+    const excerpt = lorem.generateParagraphs(1);
+    return {
+      imgSrc: `https://picsum.photos/seed/${imgSeed}/800/500`,
+      thumbnailSrc: `https://picsum.photos/seed/${imgSeed}/100/100`,
+      excerpt,
+      title,
+      timestamp: Date.now(),
+      id: String(index),
+      href: "",
     };
   });
   return {
-    props: { posts },
+    props: { posts, featurePosts },
   };
 }

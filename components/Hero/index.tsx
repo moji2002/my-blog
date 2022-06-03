@@ -6,17 +6,11 @@ import { useSelector } from "react-redux";
 import classNames from "classnames";
 import type { PostCardType } from "../../types/PostCardType";
 
-type Tuple<
-  T,
-  N extends number,
-  R extends readonly T[] = []
-> = R["length"] extends N ? R : Tuple<T, N, readonly [T, ...R]>;
-
 type Props = {
-  featurePosts: Tuple<PostCardType, 3>;
+  featurePosts: PostCardType[];
 };
 
-const Hero: FC<Props> = () => {
+const Hero: FC<Props> = ({ featurePosts }) => {
   const loaded = useSelector((state: RootState) => state.ui.loaded);
 
   return (
@@ -27,23 +21,38 @@ const Hero: FC<Props> = () => {
       <div className={s.inner}>
         <div className={s.leftColumn}>
           <HeroCard
-            title="What Your Music Preference Says About You and Your Personality."
-            imageSrc="/assets/images/xfeatured-guitarman.webp"
-            href=""
+            title={featurePosts[0].title}
+            imgSrc={featurePosts[0].imgSrc}
+            thumbnailSrc={featurePosts[0].thumbnailSrc}
+            excerpt={featurePosts[0].excerpt}
+            href={featurePosts[0].href}
+            timestamp={featurePosts[0].timestamp}
+            metaLinks={featurePosts[0].metaLinks}
+            id={featurePosts[1].id}
             primary
           />
         </div>
 
         <div className={s.rightColumn}>
           <HeroCard
-            title="The Pomodoro Technique Really Works."
-            imageSrc="/assets/images/xfeatured-watch.webp"
-            href=""
+            title={featurePosts[1].title}
+            imgSrc={featurePosts[1].imgSrc}
+            thumbnailSrc={featurePosts[0].thumbnailSrc}
+            excerpt={featurePosts[1].excerpt}
+            href={featurePosts[1].href}
+            timestamp={featurePosts[1].timestamp}
+            metaLinks={featurePosts[1].metaLinks}
+            id={featurePosts[1].id}
           />
           <HeroCard
-            title="Throwback To The Good Old Days."
-            imageSrc="/assets/images/xfeatured-beetle.webp"
-            href=""
+            title={featurePosts[2].title}
+            imgSrc={featurePosts[2].imgSrc}
+            thumbnailSrc={featurePosts[0].thumbnailSrc}
+            excerpt={featurePosts[2].excerpt}
+            href={featurePosts[2].href}
+            timestamp={featurePosts[2].timestamp}
+            metaLinks={featurePosts[2].metaLinks}
+            id={featurePosts[1].id}
           />
         </div>
       </div>

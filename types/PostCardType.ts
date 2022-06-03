@@ -4,10 +4,12 @@ export type MetaLinks = {
 };
 
 export type PostCardType = {
-  imgSrc: string;
-  excerpt: string;
+  id: string;
   title: string;
-  date: string;
+  excerpt: string;
+  href: string;
+  timestamp: number;
+  imgSrc: string;
+  thumbnailSrc?: string;
   metaLinks?: MetaLinks[];
-  index: number;
 };
