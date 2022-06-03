@@ -28,6 +28,7 @@ const HeroCard: FC<Props> = ({
         blurDataURL={thumbnailSrc}
         objectFit="cover"
         objectPosition="center"
+        priority
       />
       <div className={s.outer}>
         <div className={s.inner}>
