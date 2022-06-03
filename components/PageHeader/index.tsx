@@ -16,7 +16,7 @@ const PageHeader: FC<Props> = ({ children }) => {
         alt=""
         layout="fill"
         objectFit="cover"
-        objectPosition="fit"
+        objectPosition="center"
         quality={20}
       />
     </section>

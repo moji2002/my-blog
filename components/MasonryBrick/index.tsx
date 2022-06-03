@@ -15,6 +15,8 @@ const MasonryBrick: FC<PostCardType> = ({ imgSrc, title, excerpt }) => {
           width={400}
           height={300}
           loading="lazy"
+          objectFit="cover"
+          objectPosition="center"
         />
         {/* <img src={} alt="" /> */}
         <div className={s.context}>
