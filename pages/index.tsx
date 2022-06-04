@@ -12,6 +12,7 @@ import MasonryBrick from "../components/MasonryBrick";
 import getRandomInt from "../utils/getRandomInt";
 import lorem from "../utils/lorem";
 import type { PostCardType } from "../types/PostCardType";
+import ExtraSection from "../components/ExtraSection";
 
 type Props = {
   posts: PostCardType[];
@@ -39,6 +40,7 @@ const Home: NextPage<Props> = ({ posts, featurePosts }) => {
           <MasonryBrick key={props.id} {...props} />
         ))}
       </MasonryGrid>
+      <ExtraSection />
     </>
   );
 };

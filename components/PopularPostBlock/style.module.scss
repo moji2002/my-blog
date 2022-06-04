@@ -1,0 +1,19 @@
+.box {
+  max-width: 380px;
+  height: 70px;
+  margin-bottom: 50px;
+
+  // outline: 1px solid black;
+  display: flex;
+}
+
+.content {
+  padding: 3px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.meta {
+  font-size: 13px;
+}
