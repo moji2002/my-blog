@@ -3,11 +3,7 @@ import FooterTag from "../FooterTag";
 import PopularPostBlock from "../PopularPostBlock";
 import s from "./style.module.scss";
 
-type Props = {
-  // children: ReactNode;
-};
-
-const ExtraSection: FC<Props> = () => {
+const ExtraSection: FC = () => {
   return (
     <section className={s.extra}>
       <div className={s.upperRow}>

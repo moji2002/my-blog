@@ -4,14 +4,6 @@
 
   margin: 0 auto;
 
-  //   background-color: bisque;
-
-  // temp
-  // height: 300px;
-
-  // display: flex;
-  // flex-direction: column;
-
   padding: 80px 10px;
 }
 
@@ -28,7 +20,6 @@
 }
 
 .popular {
-  //   outline: 1px solid red;
   flex: 1;
 
   @media screen and (min-width: 1300px) {
@@ -52,12 +43,10 @@
 }
 
 .about {
-  //   outline: 1px solid green;
   flex: 1;
 }
 
 .tags {
-  //   outline: 1px solid blue;
   text-align: center;
 }
 

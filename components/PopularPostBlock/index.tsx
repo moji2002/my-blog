@@ -3,11 +3,7 @@ import Link from "next/link";
 import React, { FC } from "react";
 import s from "./style.module.scss";
 
-type Props = {
-  // children: ReactNode;
-};
-
-const PopularPostBlock: FC<Props> = () => {
+const PopularPostBlock: FC = () => {
   return (
     <div className={s.box}>
       <Image
