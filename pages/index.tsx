@@ -13,6 +13,7 @@ import getRandomInt from "../utils/getRandomInt";
 import lorem from "../utils/lorem";
 import type { PostCardType } from "../types/PostCardType";
 import ExtraSection from "../components/ExtraSection";
+import Footer from "../components/Footer";
 
 type Props = {
   posts: PostCardType[];
@@ -41,6 +42,7 @@ const Home: NextPage<Props> = ({ posts, featurePosts }) => {
         ))}
       </MasonryGrid>
       <ExtraSection />
+      <Footer />
     </>
   );
 };

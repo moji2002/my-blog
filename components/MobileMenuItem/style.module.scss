@@ -15,7 +15,7 @@
 .link {
   user-select: none;
   color: rgba(255, 255, 255, 0.7);
-  transition: color 200ms ease;
+  transition: color 500ms ease;
   display: block;
   padding: 20px 0;
 
@@ -27,7 +27,7 @@
 .item {
   height: 0;
   overflow: hidden;
-  transition: height 200ms ease;
+  transition: height 500ms ease;
 
   &_active {
     height: max-content;

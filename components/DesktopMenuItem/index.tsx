@@ -29,7 +29,7 @@ const DesktopMenuItem: FC<NavItem> = ({ label, children, href }) => {
       {children && (
         <CSSTransition
           in={active}
-          timeout={200}
+          timeout={500}
           unmountOnExit
           classNames={{
             enter: s.menuEnter,

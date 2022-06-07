@@ -13,7 +13,7 @@ const FullscreenModal: FC<Props> = ({ visible, children, handleClose }) => {
   return (
     <CSSTransition
       in={visible}
-      timeout={200}
+      timeout={500}
       unmountOnExit
       classNames={{
         enter: s.menuEnter,
