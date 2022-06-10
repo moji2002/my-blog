@@ -1,0 +1,33 @@
+.masonryBrick {
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 30px;
+  break-inside: avoid;
+}
+
+.context {
+  padding: 30px 20px;
+}
+
+.img {
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  filter: blur(5px) brightness(1.5);
+}
+
+.imgLoaded {
+  opacity: 1;
+  filter: unset;
+}
+
+.masonryBrick h2 {
+  font-family: serif;
+  margin-bottom: 10px;
+  font-size: 30px;
+  letter-spacing: 0.5px;
+}
+.masonryBrick p {
+  line-height: 1.5;
+}
