@@ -1,8 +1,15 @@
 .masonryBrick {
   width: 100%;
+  position: relative;
   background-color: #fff;
   margin-bottom: 30px;
   break-inside: avoid;
+}
+
+.skeletonContainer {
+  width: 100%;
+  height: 235px;
+  position: absolute;
 }
 
 .context {

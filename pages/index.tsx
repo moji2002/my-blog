@@ -51,13 +51,13 @@ export default Home;
 
 export async function getStaticProps() {
   const posts: PostCardType[] = [...Array(20).keys()].map((index) => {
-    const imgSeed = getRandomInt(1, 1000);
+    const imgSeed = getRandomInt(10000, 20000);
     const imgHeight = getRandomInt(200, 500);
-    const title = lorem.generateSentences(1);
+    const title = lorem.generateWords(5);
     const excerpt = lorem.generateParagraphs(1);
     return {
-      imgSrc: `https://picsum.photos/seed/${imgSeed}/400/${imgHeight}`,
-      thumbnailSrc: `https://picsum.photos/seed/${imgSeed}/100/100`,
+      imgSrc: `https://picsum.photos/seed/i${imgSeed}/400/${imgHeight}`,
+      thumbnailSrc: `https://picsum.photos/seed/i${imgSeed}/100/100`,
       excerpt,
       title,
       timestamp: Date.now(),
@@ -67,12 +67,12 @@ export async function getStaticProps() {
   });
 
   const featurePosts: PostCardType[] = [...Array(3).keys()].map((index) => {
-    const imgSeed = getRandomInt(1, 1000);
+    const imgSeed = getRandomInt(10000, 20000);
     const title = lorem.generateSentences(1);
     const excerpt = lorem.generateParagraphs(1);
     return {
-      imgSrc: `https://picsum.photos/seed/${imgSeed}/800/500`,
-      thumbnailSrc: `https://picsum.photos/seed/${imgSeed}/100/100`,
+      imgSrc: `https://picsum.photos/seed/i${imgSeed}/800/500`,
+      thumbnailSrc: `https://picsum.photos/seed/i${imgSeed}/100/100`,
       excerpt,
       title,
       timestamp: Date.now(),
@@ -82,6 +82,6 @@ export async function getStaticProps() {
   });
   return {
     props: { posts, featurePosts },
-    revalidate: 10,
+    revalidate: 86400, //daily
   };
 }

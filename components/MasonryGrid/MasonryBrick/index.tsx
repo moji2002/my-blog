@@ -4,6 +4,8 @@ import type { PostCardType } from "../../../types/PostCardType";
 import { Slide } from "react-awesome-reveal";
 import Image from "next/image";
 import classNames from "classnames";
+import Show from "../../common/helperComponents/Show";
+import Skeleton from "../../common/Skeleton";
 
 const MasonryBrick: FC<PostCardType> = ({ imgSrc, title, excerpt }) => {
   const [loading, setLoading] = useState(true);
@@ -11,6 +13,12 @@ const MasonryBrick: FC<PostCardType> = ({ imgSrc, title, excerpt }) => {
     // @ts-ignore this lib is incompatible with react18
     <Slide triggerOnce direction="up">
       <article className={s.masonryBrick}>
+        <Show when={loading}>
+          <div className={s.skeletonContainer}>
+            <Skeleton />
+          </div>
+        </Show>
+
         <Image
           className={classNames(s.img, { [s.imgLoaded]: !loading })}
           onLoad={() => setLoading(false)}
@@ -22,6 +30,7 @@ const MasonryBrick: FC<PostCardType> = ({ imgSrc, title, excerpt }) => {
           objectFit="cover"
           objectPosition="center"
         />
+
         <div className={s.context}>
           <h2>{title}</h2>
           <p>{excerpt}</p>
