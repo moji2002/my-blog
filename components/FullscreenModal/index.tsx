@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { CSSTransition } from "react-transition-group";
 import s from "./style.module.scss";
-import CloseButton from "../CloseButton";
+import CloseButton from "../common/CloseButton";
 
 type Props = {
   visible: boolean;

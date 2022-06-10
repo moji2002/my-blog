@@ -1,13 +1,13 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 const useDebounceState = <T>(initialValue: T, timeout = 300) => {
   const [state, setState] = useState<T>(initialValue);
 
-  const debounceTimeoutId = useRef<ReturnType<typeof setTimeout>>();
+  let timer: ReturnType<typeof setTimeout>;
 
   const debounce = (value: T) => {
-    clearTimeout(debounceTimeoutId.current);
-    debounceTimeoutId.current = setTimeout(() => setState(value), timeout);
+    clearTimeout(timer);
+    timer = setTimeout(() => setState(value), timeout);
   };
 
   return [state, debounce] as const;

@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import HeroCard from "../HeroCard";
+import HeroCard from "./HeroCard";
 import s from "./style.module.scss";
 import { RootState } from "../../store";
 import { useSelector } from "react-redux";

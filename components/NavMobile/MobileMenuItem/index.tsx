@@ -1,8 +1,8 @@
 import React, { FC, useRef, useState } from "react";
 import classNames from "classnames";
-import { NavItem } from "../../constants/navItems";
-import Arrow from "../SmallArrow";
-import { Sides } from "../../constants/sides";
+import { NavItem } from "../../../constants/navItems";
+import Arrow from "../../common/SmallArrow";
+import { Sides } from "../../../constants/sides";
 import s from "./style.module.scss";
 
 const MobileMenuItem: FC<NavItem> = ({ label, children, href }) => {

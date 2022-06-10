@@ -4,7 +4,7 @@ import { RootState } from "../../store";
 import { closeMenu } from "../../store/userInterfaceSlice";
 import { NAV_ITEMS } from "../../constants/navItems";
 import FullscreenModal from "../FullscreenModal";
-import MobileMenuItem from "../MobileMenuItem";
+import MobileMenuItem from "./MobileMenuItem";
 import s from "./style.module.scss";
 
 const NavMobile: FC = () => {

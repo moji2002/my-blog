@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import FooterTag from "../FooterTag";
+import FooterTag from "../Footer/FooterTag";
 import PopularPostBlock from "../PopularPostBlock";
 import s from "./style.module.scss";
 
