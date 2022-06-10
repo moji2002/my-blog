@@ -1,0 +1,70 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+$loader-width: 100px;
+$loader-height: 25px;
+$animation-duration: 1.5s;
+
+.rectangleBounce {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: $loader-width;
+  height: $loader-height;
+  z-index: 1;
+
+  .rect1,
+  .rect2,
+  .rect3,
+  .rect4,
+  .rect5,
+  .rect6,
+  .rect7,
+  .rect8 {
+    width: 5%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    animation: rectangle-bounce $animation-duration infinite ease-out;
+  }
+
+  .rect2 {
+    animation-delay: -$animation-duration + 0.1;
+  }
+  .rect3 {
+    animation-delay: -$animation-duration + 0.2;
+  }
+  .rect4 {
+    animation-delay: -$animation-duration + 0.3;
+  }
+  .rect5 {
+    animation-delay: -$animation-duration + 0.4;
+  }
+  .rect6 {
+    animation-delay: -$animation-duration + 0.5;
+  }
+  .rect7 {
+    animation-delay: -$animation-duration + 0.6;
+  }
+  .rect8 {
+    animation-delay: -$animation-duration + 0.7;
+  }
+}
+
+@keyframes rectangle-bounce {
+  0%,
+  60%,
+  100% {
+    transform: scaleY(0.8);
+    opacity: 0.1;
+  }
+  10% {
+    transform: scaleY(1);
+    opacity: 1;
+    background-color: rgb(0, 136, 255);
+  }
+}
