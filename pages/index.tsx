@@ -82,6 +82,5 @@ export async function getStaticProps() {
   });
   return {
     props: { posts, featurePosts },
-    revalidate: 86400, //daily
   };
 }
