@@ -12,15 +12,21 @@ import MasonryBrick from "../components/MasonryGrid/MasonryBrick";
 import getRandomInt from "../utils/getRandomInt";
 import lorem from "../utils/lorem";
 import type { PostCardType } from "../types/PostCardType";
+import type { FooterLink } from "../types/FooterTypes";
 import ExtraSection from "../components/ExtraSection";
 import Footer from "../components/Footer";
 
 type Props = {
   posts: PostCardType[];
   featurePosts: PostCardType[];
+  footerLinks: {
+    quickLinks: FooterLink[];
+    archives: FooterLink[];
+    social: FooterLink[];
+  };
 };
 
-const Home: NextPage<Props> = ({ posts, featurePosts }) => {
+const Home: NextPage<Props> = ({ posts, featurePosts, footerLinks }) => {
   return (
     <>
       <Head>
@@ -42,7 +48,7 @@ const Home: NextPage<Props> = ({ posts, featurePosts }) => {
         ))}
       </MasonryGrid>
       <ExtraSection />
-      <Footer />
+      <Footer links={footerLinks} />
     </>
   );
 };
@@ -80,7 +86,37 @@ export async function getStaticProps() {
       href: "",
     };
   });
+
+  const quickLinks = [
+    { label: "home", href: "" },
+    { label: "blog", href: "" },
+    { label: "style", href: "" },
+    { label: "about", href: "" },
+    { label: "contact", href: "" },
+    { label: "privacy policy", href: "" },
+  ];
+
+  const archives = [
+    { label: "january 2018", href: "" },
+    { label: "december 2017", href: "" },
+    { label: "november 2017", href: "" },
+    { label: "october 2017", href: "" },
+    { label: "september 2017", href: "" },
+    { label: "august 2017", href: "" },
+  ];
+
+  const social = [
+    { label: "facebook", href: "" },
+    { label: "instagram", href: "" },
+    { label: "twitter", href: "" },
+    { label: "telegram", href: "" },
+    { label: "linkedIn", href: "" },
+    { label: "github", href: "" },
+  ];
+
+  const footerLinks = { quickLinks, archives, social };
+
   return {
-    props: { posts, featurePosts },
+    props: { posts, featurePosts, footerLinks },
   };
 }
