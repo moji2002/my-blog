@@ -21,21 +21,33 @@ const Footer: FC<Props> = ({ links }) => {
               <Label text="quick links" />
 
               {links.quickLinks.map((link) => (
-                <FooterLink label={link.label} href={link.href} />
+                <FooterLink
+                  key={link.href}
+                  label={link.label}
+                  href={link.href}
+                />
               ))}
             </div>
             <div className={s.column}>
               <Label text="archives" />
 
               {links.archives.map((link) => (
-                <FooterLink label={link.label} href={link.href} />
+                <FooterLink
+                  key={link.href}
+                  label={link.label}
+                  href={link.href}
+                />
               ))}
             </div>
             <div className={s.column}>
               <Label text="social" />
 
               {links.social.map((link) => (
-                <FooterLink label={link.label} href={link.href} />
+                <FooterLink
+                  key={link.href}
+                  label={link.label}
+                  href={link.href}
+                />
               ))}
             </div>
           </div>
