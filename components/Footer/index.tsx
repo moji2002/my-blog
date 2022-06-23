@@ -51,7 +51,14 @@ const Footer: FC<Props> = ({ links }) => {
               ))}
             </div>
           </div>
-          <div className={s.rightHand}>right</div>
+          <div className={s.rightHand}>
+            <Label text="our newsletter" />
+            <p>
+              Sit vel delectus amet officiis repudiandae est voluptatem. Tempora
+              maxime provident nisi et fuga et enim exercitationem ipsam. Culpa
+              consequatur occaecati.
+            </p>
+          </div>
         </div>
         <div className={s.lower}></div>
       </div>
@@ -70,3 +77,5 @@ const FooterLink = ({ label, href }: { label: string; href: string }) => (
     <a className={s.link}>{label}</a>
   </Link>
 );
+
+const FooterInput = ({ iconUrl, placeHolder }) => <input type="email" />;
