@@ -13,45 +13,32 @@ type Props = {
 
 const Footer: FC<Props> = ({ links }) => {
   return (
-    <div className={s.footer}>
+    <footer className={s.footer}>
       <div className={s.inner}>
         <div className={s.upper}>
-          <div className={s.leftHand}>
-            <div className={s.column}>
-              <Label text="quick links" />
+          <div className={s.column}>
+            <Label text="quick links" />
 
-              {links.quickLinks.map((link) => (
-                <FooterLink
-                  key={link.href}
-                  label={link.label}
-                  href={link.href}
-                />
-              ))}
-            </div>
-            <div className={s.column}>
-              <Label text="archives" />
-
-              {links.archives.map((link) => (
-                <FooterLink
-                  key={link.href}
-                  label={link.label}
-                  href={link.href}
-                />
-              ))}
-            </div>
-            <div className={s.column}>
-              <Label text="social" />
-
-              {links.social.map((link) => (
-                <FooterLink
-                  key={link.href}
-                  label={link.label}
-                  href={link.href}
-                />
-              ))}
-            </div>
+            {links.quickLinks.map((link) => (
+              <FooterLink key={link.href} label={link.label} href={link.href} />
+            ))}
           </div>
-          <div className={s.rightHand}>
+          <div className={s.column}>
+            <Label text="archives" />
+
+            {links.archives.map((link) => (
+              <FooterLink key={link.href} label={link.label} href={link.href} />
+            ))}
+          </div>
+          <div className={s.column}>
+            <Label text="social" />
+
+            {links.social.map((link) => (
+              <FooterLink key={link.href} label={link.label} href={link.href} />
+            ))}
+          </div>
+
+          <div className={s.column2}>
             <Label text="our newsletter" />
             <p>
               Sit vel delectus amet officiis repudiandae est voluptatem. Tempora
@@ -60,9 +47,9 @@ const Footer: FC<Props> = ({ links }) => {
             </p>
           </div>
         </div>
-        <div className={s.lower}></div>
+        <div className={s.lower}>© Copyright Philosophy 2018</div>
       </div>
-    </div>
+    </footer>
   );
 };
 
@@ -77,5 +64,3 @@ const FooterLink = ({ label, href }: { label: string; href: string }) => (
     <a className={s.link}>{label}</a>
   </Link>
 );
-
-const FooterInput = ({ iconUrl, placeHolder }) => <input type="email" />;
